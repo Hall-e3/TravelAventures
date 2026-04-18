@@ -20,6 +20,18 @@ const assets = [
   },
   {
     src: '/home/hall/.gemini/antigravity/brain/13677a48-ecdb-42f9-bf4b-42e2cb406f28/travel_aventures_final_logo_teal_1776521829257.png',
+    dest: '/home/hall/Downloads/AppTest/TravelAventures/assets/images/android-icon-background.png'
+  },
+  {
+    src: '/home/hall/.gemini/antigravity/brain/13677a48-ecdb-42f9-bf4b-42e2cb406f28/travel_aventures_final_logo_white_1776521790745.png',
+    dest: '/home/hall/Downloads/AppTest/TravelAventures/assets/images/android-icon-foreground.png'
+  },
+  {
+    src: '/home/hall/.gemini/antigravity/brain/13677a48-ecdb-42f9-bf4b-42e2cb406f28/travel_aventures_final_logo_white_1776521790745.png',
+    dest: '/home/hall/Downloads/AppTest/TravelAventures/assets/images/android-icon-monochrome.png'
+  },
+  {
+    src: '/home/hall/.gemini/antigravity/brain/13677a48-ecdb-42f9-bf4b-42e2cb406f28/travel_aventures_final_logo_teal_1776521829257.png',
     dest: '/home/hall/Downloads/AppTest/landing/public/favicon.png'
   }
 ];
