@@ -54,7 +54,7 @@ export default function DetailScreen() {
   return (
     <View style={[styles.container, { backgroundColor: theme.bgSecondary }]}>
       <LinearGradient
-        colors={[theme.brand, theme.bgSecondary]}
+        colors={["rgba(47, 138, 119, 0.25)", "#FFFFFF"]}
         style={styles.gradient}
       />
       <SafeAreaView style={styles.safeArea} edges={["top"]}>
@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     top: 0,
-    height: 50,
+    height: 150,
   },
   scrollContent: {
     paddingBottom: Spacing.xxxl,
@@ -272,6 +272,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: Spacing.sm,
     justifyContent: "center",
+    marginTop: Spacing.md,
   },
   heroMain: {
     width: Sizes.heroMainWidth,
