@@ -13,7 +13,7 @@ export const Palette = {
 
 const Fonts = {
   regular: "ProductSans-Regular",
-  medium: "ProductSans-Medium",
+  medium: "ProductSans-Regular", // Fallback to regular as medium is missing
   bold: "ProductSans-Bold",
 };
 
@@ -157,9 +157,9 @@ export const Shadows = {
   category: {
     shadowColor: Palette.black,
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.05,
-    shadowRadius: 10,
-    elevation: 2,
+    shadowOpacity: 0.04,
+    shadowRadius: Radii.sm,
+    elevation: 1,
   },
 };
 

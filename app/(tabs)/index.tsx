@@ -78,7 +78,6 @@ export default function HomeScreen() {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.scrollContent}
         >
-          {/* Banner */}
           <View
             style={[styles.bannerContainer, { backgroundColor: theme.white }]}
           >
@@ -89,7 +88,6 @@ export default function HomeScreen() {
             />
           </View>
 
-          {/* Categories */}
           <View style={styles.section}>
             <SectionHeader title="Categories" />
             <ScrollView
@@ -103,7 +101,6 @@ export default function HomeScreen() {
             </ScrollView>
           </View>
 
-          {/* Popular Itineraries */}
           <View style={styles.section}>
             <SectionHeader title="Popular Itineraries" onViewAll={() => {}} />
             <FlatList
@@ -126,7 +123,6 @@ export default function HomeScreen() {
             />
           </View>
 
-          {/* Recommended Itineraries */}
           <View style={styles.section}>
             <SectionHeader
               title="Recommended Itineraries"
@@ -182,9 +178,9 @@ const styles = StyleSheet.create({
   bannerContainer: {
     marginHorizontal: Spacing.xl,
     height: Sizes.bannerHeight,
-    borderRadius: Radii.xl,
+    borderRadius: Radii.sm,
     overflow: "hidden",
-    marginBottom: Spacing.xl,
+    marginVertical: Spacing.md,
   },
   bannerImage: {
     width: "100%",

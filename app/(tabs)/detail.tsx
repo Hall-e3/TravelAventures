@@ -10,10 +10,10 @@ import {
 import { DAY_TABS, FILTERS, HIGHLIGHTS, INCLUDES } from "@/data";
 import { Itinerary } from "@/types";
 import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React, { useState } from "react";
 import {
-  Dimensions,
   Image,
   ScrollView,
   StyleSheet,
@@ -22,8 +22,6 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
-const { width } = Dimensions.get("window");
 
 export default function DetailScreen() {
   const router = useRouter();
@@ -54,7 +52,11 @@ export default function DetailScreen() {
   const thumbnails = [image, image, image];
 
   return (
-    <View style={[styles.container, { backgroundColor: theme.bgPrimary }]}>
+    <View style={[styles.container, { backgroundColor: theme.bgSecondary }]}>
+      <LinearGradient
+        colors={[theme.brand, theme.bgSecondary]}
+        style={styles.gradient}
+      />
       <SafeAreaView style={styles.safeArea} edges={["top"]}>
         <AppBar
           leftActions={
@@ -99,11 +101,9 @@ export default function DetailScreen() {
         />
 
         <ScrollView
-          style={styles.root}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.scrollContent}
         >
-          {/* Hero Section */}
           <View style={styles.heroWrap}>
             <View style={styles.heroMain}>
               <Image source={{ uri: image }} style={styles.heroImage} />
@@ -222,26 +222,26 @@ export default function DetailScreen() {
             </Text>
           </View>
         </ScrollView>
-      </SafeAreaView>
-
-      {/* Bottom Bar */}
-      <View style={[styles.bottomBar, { backgroundColor: theme.black }]}>
-        <View>
-          <Text style={[styles.bottomPrice, { color: theme.white }]}>
-            ${price.replace("From $", "")}
-          </Text>
-          <Text style={[styles.bottomPriceSub, { color: theme.textSecondary }]}>
-            Per Person
-          </Text>
+        <View style={[styles.bottomBar, { backgroundColor: theme.black }]}>
+          <View>
+            <Text style={[styles.bottomPrice, { color: theme.white }]}>
+              ${price.replace("From $", "")}
+            </Text>
+            <Text
+              style={[styles.bottomPriceSub, { color: theme.textSecondary }]}
+            >
+              Per Person
+            </Text>
+          </View>
+          <TouchableOpacity
+            style={[styles.bookBtn, { backgroundColor: theme.yellow }]}
+          >
+            <Text style={[styles.bookBtnText, { color: theme.white }]}>
+              Book Now
+            </Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity
-          style={[styles.bookBtn, { backgroundColor: theme.yellow }]}
-        >
-          <Text style={[styles.bookBtnText, { color: theme.white }]}>
-            Book Now
-          </Text>
-        </TouchableOpacity>
-      </View>
+      </SafeAreaView>
     </View>
   );
 }
@@ -257,11 +257,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: Spacing.sm,
   },
-  root: {
-    flex: 1,
+
+  gradient: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    height: 50,
   },
   scrollContent: {
-    paddingBottom: 100,
+    paddingBottom: Spacing.xxxl,
   },
   heroWrap: {
     flexDirection: "row",

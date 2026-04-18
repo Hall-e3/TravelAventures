@@ -51,7 +51,7 @@ export default function CategoryCard({ label, onPress }: CategoryCardProps) {
 
 const styles = StyleSheet.create({
   categoryCard: {
-    borderRadius: Radii.lg,
+    borderRadius: Radii.sm,
     height: Sizes.categoryCardHeight,
     width: Sizes.categoryCardWidth,
     alignItems: "center",

@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   card: {
     width: Sizes.popularCardWidth,
     height: Sizes.popularCardHeight,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.sm,
     overflow: "hidden",
     position: "relative",
   },
