@@ -424,7 +424,7 @@ const styles = StyleSheet.create({
   },
   bookBtn: {
     paddingHorizontal: Spacing.xxxl,
-    paddingVertical: Spacing.md,
+    paddingVertical: Spacing.sm,
     borderRadius: Radii.xs,
   },
   bookBtnText: {
